@@ -7,11 +7,31 @@
 
     </head>
 
-    <body>
-        <script>
-            alert("Alerta do JavaScript do index.html");
-        </script>
+    <body onload="aviso_importante()">
+        <button type="button" onclick="clicou()">Por favor...clique aqui</button>
+        <h3 id="agradecimento" onclick="passear()"></h3>
+
+
+        <p onmouseover="trocar(this)" onmouseout="trocar(this)">Frase sensível</p>
+
+        <h2 onmouseover="trocar(this)" onmouseout="trocar(this)">Frase sensível</h2>
+
+        <h4 onmouseover="trocar(this)" onmouseout="trocar(this)">Frase sensível</h4>
+
+        <button id="muda_valor" type="button" onclick="meuValor(this)">Vale 1</button><!-- botão muda valor -->
+        
+
+        <select onchange="mudanca(this)">
+            <option value="1">Valor 1</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
 
         <h1>MINHA PÁGINA</h1>
+        
+        <script>
+            alert("Alerta do JavaScript do \n INDEX.HTML");
+        </script>
+
     </body>
 </html>

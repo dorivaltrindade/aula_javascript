@@ -1,53 +1,49 @@
-/* alert ("Alerta do JavaScript do main.js!");
+//  P Á G I N A S   W E B   C O M   J A V A S C R I P T  //
 
-var nome = "Dorival";
-var idade = 57;
-var duracao_curso =2;
-var melhor_time = "O Japão possui o melhor time de futebol do mundo!";
-var n1 = 5;
-var n2 = 3;
+// = = = = = parte 5 = = = = = //
+
+//Manipulando elementos da página
+
+function clicou(){
+
+    alert("Valeu, obrigado por clicar!");
+
+    document.getElementById("agradecimento").innerHTML = "<i>Obrigado</i> por <b>clicar</b>. Clique aqui passear em outras páginas!";
+    console.log(document.getElementById("agradecimento"));
+
+}
+
+function passear(){
+    window.open("https://innovationlabschools.com"); // abre página em outra janela
+    window.location.href = "http://www.uol.com.br/"; // abre página na mesma janela
+}
+
+function trocar(elemento){  //utilizando o benefício do artifício THIS no HTML - simplifica a carga do objeto, 
+                            //o manuseio de suas propriedades e dispensa o byId
+    //console.log(elemento.textContent);
+   if (elemento.textContent == "Frase sensível"){
+
+        elemento.innerHTML = "Tira esse mouse de cima de mim!";
+        
+   }else {
+
+        elemento.innerHTML = "Frase sensível";
+   }
+}
 
 
+function aviso_importante(){
 
-alert( nome +" tem "+idade +" anos.");
-alert("Ao terminar o curso, terá "+ (idade + duracao_curso)+" anos!");
-console.log (nome);
-console.log (idade + duracao_curso);
-console.log(melhor_time);
-alert(melhor_time.replace("Japão","Brasil"));
-console.log(melhor_time.toLowerCase());
-console.log("Multiplicando 1º número ("+n1+") * 2º número ("+n2+") = "+n1*n2); */
+    var d=new Date();
 
-// = = = = = parte 2 = = = = = //
+    alert("AVISO IMPORTANTE:" + "\n" +"Hoje é dia " + d.getDate() +" do mês " + (d.getMonth() + 1) + " do ano de " + d.getFullYear() + "!");
+}
 
-// - - -  A R R A Y  - - - //
+function mudanca(elemento){
+    //console.log(elemento.value);
+    document.getElementById("muda_valor").innerHTML = "Vale "+elemento.value;
+}
 
-var lista = ['maça', 'pera','laranja'];
-console.log(lista);
-console.log(lista[1]);    //exibe o elemento da posição 1 da array lista
-lista.push('uva'); //acrescenta ao final da array lista
-console.log(lista);
-lista.pop();    //remove do final da array lista
-console.log(lista);
-console.log("A array LISTA possui " + lista.length + " elementos.");   //número de elementos da array lista
-console.log(lista.toString());  //assim, perde a condição de array e vira string pura
-console.log(lista.toString()[0]);   //exibe o primeiro caracter da string pura
-console.log(lista.toString().length + " caracteres"); //exibe a cquantidade caracteres dentro da string pura
-console.log(lista.join(" | ")); //transforma em string e une os elementos da array separados por " | "
-console.log(lista.join(" | ").length + " caracteres"); //21 caracteres
-console.log(lista.join("") + " -> fica com " + lista.join("").length + " caracteres");
-
-// - - -  D I C I O N Á R I O  - - - //
-
-var frutas = {nome:"maçã", cor:"vermelha"};
-console.log(frutas.nome);
-
-// lista de dicionários //
-
-var fruteira = [{nome:"maçã", cor:"vermelha"},{nome:"uva", cor:"roxa"},{nome:"pera", cor:"verde"}];
-console.log(fruteira[2].nome);
-console.log(fruteira);
-console.log(fruteira.length);
-console.log(fruteira[0].cor.length);
-
-// = = = = = parte 3 = = = = = //
+function meuValor(botao){
+    alert("Estou valendo ..." + botao.textContent + "!");
+}
